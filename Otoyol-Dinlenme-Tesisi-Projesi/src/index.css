@@ -1,0 +1,88 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 222.2 84% 4.9%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 84% 4.9%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
+
+		--primary: 262.1 83.3% 57.8%; /* Vibrant Purple */
+		--primary-foreground: 210 40% 98%;
+
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+
+		--accent: 34.9 91.6% 58.4%; /* Vibrant Orange */
+		--accent-foreground: 210 40% 98%;
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
+
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+		--ring: 262.1 83.3% 57.8%; /* Vibrant Purple for focus */
+
+		--radius: 0.5rem;
+	}
+
+	.dark {
+		--background: 222.2 84% 4.9%;
+		--foreground: 210 40% 98%;
+
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+
+		--primary: 262.1 83.3% 57.8%; /* Keep Vibrant Purple */
+		--primary-foreground: 210 40% 98%;
+
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+
+		--accent: 34.9 91.6% 58.4%; /* Keep Vibrant Orange */
+		--accent-foreground: 210 40% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 40% 98%;
+
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+		--ring: 262.1 83.3% 57.8%; /* Vibrant Purple for focus */
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+/* Add a subtle background pattern */
+body {
+  background-image: linear-gradient(to right, rgba(240, 240, 240, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(240, 240, 240, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark body {
+  background-image: linear-gradient(to right, rgba(50, 50, 50, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(50, 50, 50, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
